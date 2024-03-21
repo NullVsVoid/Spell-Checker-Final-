@@ -472,6 +472,11 @@ int main() {
 
             print_results(misspelled, corrections);
         } else if (choice == "F" || choice == "f") {
+            if (dictionary.empty()) {
+                std::cout << "\nPlease load a dictionary first.\n";
+                continue;
+            }
+
             std::cout
                 << "Enter the filename for spell checking and correction: ";
             std::string filename;
